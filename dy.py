@@ -3,9 +3,14 @@ import pandas as pd
 import time
 import random
 from DrissionPage import ChromiumPage
+from DrissionPage import ChromiumOptions, ChromiumPage
+
+co = ChromiumOptions()
+co.set_browser_path(r'C:/Program Files/Google/Chrome/Application/chrome.exe')  # 这里换成你的 Chrome 安装路径
+page = ChromiumPage(co)
 
 # 初始化 ChromiumPage（推荐提前启动 ChromeDriver，或使用已安装的 Chrome 浏览器）
-page = ChromiumPage()
+# page = ChromiumPage()
 
 # Streamlit 页面标题
 st.title("抖音评论抓取工具")
